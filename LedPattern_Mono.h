@@ -17,6 +17,7 @@ class LedPattern_Mono : public LedPattern
 #ifndef LED_PATTERN_FADE_UNSUPPORTED
         void ledFadeTo(pattern& p, const uint8_t steps);
         void ledUpdate(void);
+        void ledFadeStop(void);
         int16_t m_state;
         int16_t m_step;
 #endif

@@ -47,6 +47,11 @@ void LedPattern_Mono::ledSet(pattern& p)
 }
 
 #ifndef LED_PATTERN_FADE_UNSUPPORTED
+void LedPattern_Mono::ledFadeStop(void)
+{
+    m_step = 0;
+}
+
 void LedPattern_Mono::ledFadeTo(pattern& p, const uint8_t steps)
 {
     uint8_t target = *p++;
